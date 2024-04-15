@@ -26,4 +26,9 @@ public class MeinController {
         response.put("foo", foo);
         return response;
     }
+
+    @GetMapping(value = "/hallohtml", produces = "text/html")
+    public String halloHtml() {
+        return "<html><body><h1>Hallo, Welt!</h1></body></html>";
+    }
 }
